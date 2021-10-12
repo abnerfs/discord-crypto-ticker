@@ -41,7 +41,7 @@ export class Bot {
         }
 
         await updateInterval();
-        setInterval(updateInterval, 1000 * 60);
+        setInterval(updateInterval, 1000 * 60 * 2);
     }
 }
 

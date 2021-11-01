@@ -1,5 +1,5 @@
 import { Client, Intents } from "discord.js";
-import { BOT_TOKEN, CRYPTO_ID, CURRENCY_CONVERT } from './config'
+import { BOT_TOKEN, CRYPTO_ID, CURRENCY_CONVERT, MINUTES_DELAY } from './config'
 import { getCryptoPrice, Quote } from "./services/coinmarketcap";
 export class Bot {
     client: Client;
@@ -41,7 +41,7 @@ export class Bot {
         }
 
         await updateInterval();
-        setInterval(updateInterval, 1000 * 60 * 2);
+        setInterval(updateInterval, 1000 * 60 * MINUTES_DELAY);
     }
 }
 
